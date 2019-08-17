@@ -1,7 +1,7 @@
-import { Event, EventEnum } from "./Event";
+import Event from "./Event";
 
 const event = new Event();
 
-event.emit(EventEnum.Keyboard);
-event.emit(EventEnum.Mouse, 10, 100);
-event.emit(EventEnum.Enter);
+event.emit('keyboard');
+event.emit('mouse', 10, 100);
+event.emit('enter');
