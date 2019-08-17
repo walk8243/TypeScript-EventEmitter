@@ -20,9 +20,9 @@ export default class Event extends EventEmitter {
     console.log(x, y);
   }  
 
-  on(event: 'keyboard', listener: Event['eventListenerKeyboard']): this;
-  on(event: 'enter' | 'escape', listener: Event['eventListenerEnter']): this;
-  on(event: 'mouse', listener: Event['eventListenerMouse']): this;
+  on(event: 'keyboard', listener: () => void): this;
+  on(event: 'enter' | 'escape', listener: () => void): this;
+  on(event: 'mouse', listener: (mouseX: number, mouseY: number) => void): this;
   on(event: EventType, listener: (...args: any[]) => void) {
     return super.on(event, listener);
   }
